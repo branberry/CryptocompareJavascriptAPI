@@ -6,5 +6,10 @@ fetch(url)
     .then(res => res.json())
     .then(d => {
         cryptoResponse = d.Data;
-        console.log(cryptoResponse)
+        callback(cryptoResponse);
     });
+
+
+callback = (data) => {
+    console.log(data);
+}
